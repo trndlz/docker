@@ -4,4 +4,9 @@
 # pouvez vérifier le fonctionnement de votre container en allant sur un
 # http://<ip-de-char>:5000 comme URL sur votre navigateur internet
 
-docker run --name overlord -p 5000:80 nginx
+docker run --name overlord -p 5000:80 --restart=always -d nginx
+
+# --name : specifies name
+# -p : port specification -> local-machine-port:internal-container-port
+# --restart=always -> Always restart the container if it stops.
+# -d -> starts container in the background

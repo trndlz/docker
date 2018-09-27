@@ -1,0 +1,19 @@
+# Depuis le shell d’un container debian, faire en sorte d’installer via le gestionnaire
+# de paquets du container, de quoi compiler un code source en C et le pusher sur
+# un repo git (en veillant avant de bien mettre à jour le gestionnaire de paquets et
+# les paquets présents de base dans le container). Seules les commandes à effectuer
+# dans le container sont demandées pour cet exercice.
+
+# Création container Debian
+# docker run -it --rm debian
+
+apt-get update
+apt-get install gcc
+apt-get install vim
+apt-get install git
+git clone https://github.com/trndlz/docker.git
+cd docker
+vim test.c
+git add test.c
+git commit -m "Added test file"
+git push

@@ -1,0 +1,14 @@
+# Lancer un container wordpress en tâche de fond, pour le lulz. Le container doit
+# avoir pour nom lair, le port 80 du container doit etre bindé au port 8080 de
+# la machine virtuelle et doit pouvoir utiliser le container spawning-pool comme
+# service de base de données. Vous pouvez tenter d’accéder à lair sur votre machine
+# via un navigateur en rentrant l’adresse IP de la machine virtuelle comme URL.
+# Bravo, vous venez de deployer un site Wordpress fonctionnel en 2 commandes !
+
+docker run                          \
+-e WORDPRESS_DB_PASSWORD=Kerrigan \
+--name lair                    \
+--link spawning-pool:mysql            \
+-p 8080:80                            \
+-d                                  \
+wordpress
