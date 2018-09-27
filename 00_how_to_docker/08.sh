@@ -6,3 +6,4 @@ docker run -it --rm alpine /bin/sh
 
 # -it instructs Docker to allocate a pseudo-TTY connected to the container’s stdin
 # --rm: deletes the container immediately after it exits
+

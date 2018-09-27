@@ -5,10 +5,13 @@
 # via un navigateur en rentrant l’adresse IP de la machine virtuelle comme URL.
 # Bravo, vous venez de deployer un site Wordpress fonctionnel en 2 commandes !
 
-docker run                          \
--e WORDPRESS_DB_PASSWORD=Kerrigan \
---name lair                    \
---link spawning-pool:mysql            \
--p 8080:80                            \
--d                                  \
+docker run                              \
+-e WORDPRESS_DB_PASSWORD=Kerrigan       \
+--name lair                             \
+--link spawning-pool:mysql              \
+-p 8080:80                              \
+-d                                      \
 wordpress
+
+# Results verification
+# Connect on http://<spawning-pool's IP>:8080
