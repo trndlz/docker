@@ -6,7 +6,7 @@
 # Bravo, vous venez de deployer un site Wordpress fonctionnel en 2 commandes !
 
 docker run                              \
--e WORDPRESS_DB_PASSWORD=Kerrigan       \
+--env WORDPRESS_DB_PASSWORD=Kerrigan    \
 --name lair                             \
 --link spawning-pool:mysql              \
 --publish 8080:80                       \
