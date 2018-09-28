@@ -1,0 +1,14 @@
+# ... Damn, des zergs sont en train d’attaquer orbital-command et couper le service
+# engineering-bay ne servira a rien... Vous devez envoyer des Marines pour les éliminer...
+# Lancer un service 42school/marine-squad en 2 repliques, et faites en sorte que le
+# service fonctionne (se référer à la doc fournie dans hub.docker.com). Ce service
+# s’appellera ... marines et sera sur le reseau overmind
+
+docker service create       \
+--detach                    \
+--network overmind          \
+--name marine               \
+--replicas 2                \
+--env OC_USERNAME=user      \
+--env OC_PASSWD=password    \
+42school/marine-squad
