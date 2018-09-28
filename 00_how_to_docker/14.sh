@@ -9,8 +9,8 @@ docker run                              \
 -e WORDPRESS_DB_PASSWORD=Kerrigan       \
 --name lair                             \
 --link spawning-pool:mysql              \
--p 8080:80                              \
--d                                      \
+--publish 8080:80                       \
+--detach                                \
 wordpress
 
 # Results verification

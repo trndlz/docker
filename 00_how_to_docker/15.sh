@@ -6,8 +6,8 @@
 docker run                              \
 --name roach-warden                     \
 --link spawning-pool:db                 \
--p 8081:80                              \
--d                                      \
+--publish 8081:80                       \
+--detach                                \
 phpmyadmin/phpmyadmin
 
 # Results verification
