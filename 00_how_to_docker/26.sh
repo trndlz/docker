@@ -5,7 +5,7 @@
 docker service create       \
 --detach                    \
 --network overmind          \
---name eb                   \
+--name engineering-bay      \
 --replicas 2                \
 --env OC_USERNAME=user      \
 --env OC_PASSWD=password    \
