@@ -7,7 +7,7 @@
 docker service create       \
 --detach                    \
 --network overmind          \
---name marine               \
+--name marines              \
 --replicas 2                \
 --env OC_USERNAME=user      \
 --env OC_PASSWD=password    \
