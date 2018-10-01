@@ -13,7 +13,10 @@ docker run                              \
 mysql
 
 # Container shell access and viewing MySQL logs
-## docker exec -it some-mysql bash
+## docker exec -it spawning-pool bash
 
 # Connecting to the MySQL Server inside mysql Client
 ## mysql -u root -p
+## SHOW DATABASES;
+## USE zerglings;
+## SHOW TABLES;

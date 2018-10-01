@@ -24,7 +24,7 @@ docker exec Abathur pip install flask
 
 # exec : Run a command in a running container
 
-echo 'from flask import Flask\napp = Flask(__name__)\n\n@app.route("/")\ndef hello_world():\n\treturn "<h1>Hello World</h1>"' > ~/Desktop/test.py
+echo -e 'from flask import Flask\napp = Flask(__name__)\n\n@app.route("/")\ndef hello_world():\n\treturn "<h1>Hello World</h1>"' > ~/Desktop/test.py
 
 # Creates python script in mounted folder
 
