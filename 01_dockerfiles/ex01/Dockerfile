@@ -11,8 +11,6 @@ EXPOSE      9987/udp
 EXPOSE      10011/tcp
 EXPOSE      30033/tcp
 
-WORKDIR     /root/byotss
-
 RUN         wget http://dl.4players.de/ts/releases/3.4.0/teamspeak3-server_linux_amd64-3.4.0.tar.bz2
 RUN         tar xfv teamspeak3-server_linux_amd64-3.4.0.tar.bz2
 
