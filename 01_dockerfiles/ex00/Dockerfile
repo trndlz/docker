@@ -1,12 +1,12 @@
-FROM alpine:3.8
+FROM        alpine:3.8
 
-MAINTAINER tmervin@student.42.fr
+MAINTAINER  tmervin@student.42.fr
 
-RUN apk update
-RUN apk upgrade
-RUN apk add vim
+RUN         apk update
+RUN         apk upgrade
+RUN         apk add vim
 
-ENTRYPOINT vim
+ENTRYPOINT  ["vim"]
 
 # Build Dockerfile
 # docker build --tag ex00 .
