@@ -1,4 +1,4 @@
-FROM alpine:3.8 AS ex00
+FROM alpine:3.8
 
 MAINTAINER tmervin@student.42.fr
 
