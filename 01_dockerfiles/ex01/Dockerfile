@@ -1,7 +1,5 @@
 FROM        debian:9.5
 
-MAINTAINER  tmervin@student.42.fr
-
 RUN         apt-get update
 RUN         apt-get upgrade
 RUN         apt-get -y install wget
