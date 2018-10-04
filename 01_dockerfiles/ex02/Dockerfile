@@ -1,17 +1,24 @@
-FROM ruby:2.5
+FROM                    ruby:2.5
 
-RUN apt-get update -qq && apt-get install -y nodejs && gem install rails && gem install bundler
+RUN                     apt-get update
+RUN                     apt-get install -y nodejs
+RUN                     gem install rails 
+RUN                     gem install bundler
 
-ONBUILD COPY . /opt/app
-ONBUILD WORKDIR /opt/app
+ONBUILD COPY            . /opt/app
+ONBUILD WORKDIR         /opt/app
 
-ONBUILD RUN bundle install --jobs 20 --retry 5
-ONBUILD EXPOSE 3000
-ONBUILD RUN rake db:migrate
-ONBUILD RUN rake db:seed
+ONBUILD RUN             bundle install --jobs 20
+ONBUILD EXPOSE          3000
+
+ONBUILD RUN             rake db:migrate
+ONBUILD RUN             rake db:seed
+
+# bundle install --jobs 20 -> Run 20 downloads simultaneously
+#
 
 ########## SAMPLE APPS
-# https://github.com/mhartl/sample_app
+# https://bitbucket.org/railstutorial/sample_app_4th_ed.git
 # https://github.com/RailsApps/rails-signup-thankyou
 
 ########## LAUNCH APP

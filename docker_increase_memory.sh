@@ -1,4 +1,4 @@
-docker-machine stop
-VBoxManage modifyvm default --cpus 2
-VBoxManage modifyvm default --memory 4096
-docker-machine start
+docker-machine stop Char
+VBoxManage modifyvm Char --cpus 2
+VBoxManage modifyvm Char --memory 4096
+docker-machine start Char
