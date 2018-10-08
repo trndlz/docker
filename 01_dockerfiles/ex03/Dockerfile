@@ -26,6 +26,7 @@ ENTRYPOINT ((/opt/gitlab/embedded/bin/runsvdir-start &) && gitlab-ctl reconfigur
 # In browser: <machine ip>:8080
 # Then, define password (username is 'root')
 # Then, create SSH key in terminal 'ssh-keygen', paste it in a new SSH key in user profile
+# SSH is located in ~/.ssh/id_rsa.pub
 # To clone a repo, git clone http://<ip machine>:8080/root/<repo name>.git
 
 ### INFOS

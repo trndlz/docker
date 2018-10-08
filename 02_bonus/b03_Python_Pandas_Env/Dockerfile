@@ -1,4 +1,4 @@
-FROM        python:latest
+FROM        python:3.7.0-slim-stretch
 RUN         pip install --upgrade pip
 # Packages installation (you can add all numpy matplotlib pandas-datareader quandl sklearn ...)
 RUN         pip install pandas
