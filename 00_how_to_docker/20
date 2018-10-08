@@ -8,3 +8,4 @@
 docker swarm init --advertise-addr $(docker-machine ip Char)
 
 # --advertise-addr : Advertised address (format: <ip|interface>[:port])
+# Check with docker node ls

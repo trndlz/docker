@@ -7,11 +7,7 @@
 # Création container Debian
 # docker run -it --rm debian
 
-apt-get update
-apt-get upgrade -y
-apt-get install gcc
-apt-get install vim
-apt-get install git
+apt-get update && apt-get upgrade -y && apt-get install -y gcc vim build-essential git
 git clone https://github.com/trndlz/docker.git
 cd docker
 vim test.c
