@@ -16,3 +16,12 @@ COPY sbt /bin/sbt
 RUN chmod u+x /bin/sbt
 
 RUN sbt info
+
+#### Build Dockerfile
+# docker build -t b04 .
+#### Run Scala environment
+# docker run -it --rm b04 scala
+
+# Example
+# val a = array(1, 2, 3, 4)
+# a.sum

@@ -12,11 +12,11 @@ EXPOSE      30033/tcp
 RUN         wget http://dl.4players.de/ts/releases/3.4.0/teamspeak3-server_linux_amd64-3.4.0.tar.bz2
 RUN         tar xfv teamspeak3-server_linux_amd64-3.4.0.tar.bz2
 
-WORKDIR     teamspeak3-server_linux_amd64
+WORKDIR     ./teamspeak3-server_linux_amd64
 
 RUN         touch .ts3server_license_accepted
 
-ENTRYPOINT  ["sh", "ts3server_minimal_runscript.sh"]
+ENTRYPOINT  sh ./ts3server_minimal_runscript.sh
 
 ########## Build command
 # docker build --tag ex01 .

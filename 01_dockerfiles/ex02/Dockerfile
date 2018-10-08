@@ -14,9 +14,6 @@ ONBUILD EXPOSE          3000
 ONBUILD RUN             rake db:migrate
 ONBUILD RUN             rake db:seed
 
-# bundle install --jobs 20 -> Run 20 downloads simultaneously
-#
-
 ########## SAMPLE APPS
 # https://bitbucket.org/railstutorial/sample_app_4th_ed.git
 # https://github.com/RailsApps/rails-signup-thankyou

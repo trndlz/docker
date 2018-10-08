@@ -4,7 +4,7 @@ RUN         apk update
 RUN         apk upgrade
 RUN         apk add vim
 
-ENTRYPOINT  ["vim"]
+ENTRYPOINT  vim
 
 # Build Dockerfile
 # docker build --tag ex00 .
