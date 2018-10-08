@@ -1,0 +1,57 @@
+version: "3"
+
+services:
+  camagru-apache:
+    build:
+      context: ./
+    container_name: camagru-apache
+    ports:
+      - "8080:80"
+    volumes:
+      - ./php:/var/www/html:rw
+    depends_on:
+      - camagru-mysql
+    networks:
+      - camagru-net
+  camagru-mysql:
+    image: mysql:5.7
+    container_name: camagru-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: camagru
+    volumes:
+      - camagru-mysql-data:/var/lib/mysql
+    networks:
+      - camagru-net
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - camagru-mysql
+    networks:
+      - camagru-net
+    ports:
+      - 9191:80
+    environment:
+      PMA_HOST: camagru-mysql
+      PMA_USER: root
+      PMA_PASSWORD: 123456
+networks:
+  camagru-net:
+    driver: bridge
+
+volumes:
+  camagru-mysql-data:
+
+# Run with : docker-compose up
+# When server is created, visit test page with http://<ip>:8080
+# PhpMyAdmin connection, go to http://<ip>:9191
+
+
+####################
+# Installation CAMAGRU
+####################
+# 1) Clone https://github.com/trndlz/camagru.git into ./php folder
+# 2) Change config/config.php, $DB_DSN with 'mysql:dbname=camagru;host=camagru-mysql';
+# 3) Connect to PhpMyAdmin and add camagru.sql. Then, empty tables.
